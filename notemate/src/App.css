@@ -4,7 +4,7 @@
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  height: 75px;
 }
 
 .App-header {
@@ -25,12 +25,12 @@
   margin-bottom: 0;
   padding: 8px;
   font-family: 'Open Sans', sans-serif;
-
 }
 
 .Form-container {
   display: flex;
   justify-content: center;
+  background: #f9f9f9;
 }
 
 .btn {
@@ -39,7 +39,6 @@
   /*font-family: 'Raleway', sans-serif;*/
   color: white;
   background-color: #016085;
-
 }
 
 
@@ -53,7 +52,7 @@
 .panel {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 45%;
   align-self: center;
   /*justify-content: center;*/
   font-family: 'Raleway', sans-serif;
@@ -61,8 +60,12 @@
   padding: 5px;*/
 }
 
+.panel-title {
+  border-top-left-radius: 5px;
+}
+
 .panel button {
-  border-radius: 5px;
+  border-radius: 0 0 5px 5px;
   background-color: #A8C0A6;
 }
 
@@ -73,7 +76,7 @@
 .App-form {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 45%;
   padding: 8px;
   letter-spacing: 0.4em;
   font-family: 'Raleway', sans-serif;
@@ -93,8 +96,9 @@ textarea {
 }
 
 .Note-list-outter h1 {
-  font-size: 1.5em;
+  font-size: 1.8em;
   font-family: 'Open Sans', sans-serif;
-  text-decoration: underline;
+
+  /*text-decoration: underline;*/
   padding-bottom: 8px;
 }

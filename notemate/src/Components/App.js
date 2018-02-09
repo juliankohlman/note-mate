@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from '../logo.svg';
+// import logo from '../logo.svg';
 import notebook from '../notebook.svg';
 import '../App.css';
 import NoteForm from './NoteForm';
