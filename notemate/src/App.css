@@ -8,7 +8,7 @@
 }
 
 .App-header {
-  background-color: #222;
+  background-color: #016085;
   height: 150px;
   padding: 20px;
   color: white;
@@ -16,13 +16,85 @@
 
 .App-title {
   font-size: 1.5em;
+  font-family: 'Space Mono', sans-serif;
 }
 
 .App-intro {
+  background: #A8C0A6;
   font-size: large;
+  margin-bottom: 0;
+  padding: 8px;
+  font-family: 'Open Sans', sans-serif;
+
 }
+
+.Form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  /*width: 40%;*/
+  /*align-self: center;*/
+  /*font-family: 'Raleway', sans-serif;*/
+  color: white;
+  background-color: #016085;
+
+}
+
+
+
+.Note-container {
+  display: flex;
+  flex-direction: column;;
+  justify-content: center;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-self: center;
+  /*justify-content: center;*/
+  font-family: 'Raleway', sans-serif;
+/*  border: solid;
+  padding: 5px;*/
+}
+
+.panel button {
+  border-radius: 5px;
+  background-color: #A8C0A6;
+}
+
+/*.Note-list-outter {
+  background: #4B8593;
+}*/
+
+.App-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 8px;
+  letter-spacing: 0.4em;
+  font-family: 'Raleway', sans-serif;
+}
+
+/*input {
+  border-radius: 5px;
+}
+
+textarea {
+  border-radius: 5px;
+}*/
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.Note-list-outter h1 {
+  font-size: 1.5em;
+  font-family: 'Open Sans', sans-serif;
+  text-decoration: underline;
+  padding-bottom: 8px;
 }

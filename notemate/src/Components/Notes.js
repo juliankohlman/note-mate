@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Note from './Note';
-
+import '../App.css';
 class Notes extends Component {
   constructor(props) {
     super(props);
@@ -22,7 +22,7 @@ class Notes extends Component {
 
   render() {
     return (
-      <div>
+      <div className="Note-list-outter">
       {/* show a list empty  h1 message when notes length is 0 otherwise show note list h1 */}
       {(this.props.notes.length === 0) ? <h1>Note List Empty</h1> : <h1>Note List</h1>}
 

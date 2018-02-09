@@ -7,10 +7,11 @@ import { deleteNote, updateNote } from '../Actions';
 
 class Note extends Component {
 // const Note = (props) => {
-  constructor(props) {
-    super(props);
+  constructor(props, context) {
+    super(props, context);
     this.state = {
-      notes: this.props.notes
+      notes: this.props.notes,
+      open: true
     };
   }
 
@@ -31,13 +32,15 @@ updateNoteHandler = e => {
 
   render() {
     return (
-      <div>
+      <div className="Note-container">
         {/*{console.log(this.props.notes)}*/}
-        <Panel bsStyle="primary">
-            <Panel.Heading>{this.props.title}</Panel.Heading>
-            <Panel.Body>{this.props.text}</Panel.Body>
-            <button type="button" value={this.props.text} onClick={this.updateNoteHandler}>Edit Note</button>
-            <button type="button" value={this.props.title} onClick={this.deleteNoteHandler}>Delete Note</button>
+        <Panel>
+          <Panel.Heading>
+            <Panel.Title>{this.props.title}</Panel.Title>
+          </Panel.Heading>
+              <Panel.Body>{this.props.text}</Panel.Body>
+            {/*<button type="button" value={this.props.text} onClick={this.updateNoteHandler}>Edit Note</button>*/}
+              <button type="button" value={this.props.title} onClick={this.deleteNoteHandler}>Delete Note</button>
           </Panel>
         {/*<p>{props.title}</p>
         <p>{props.text}</p>*/}

@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addNote  } from '../Actions';
+import { Button } from 'react-bootstrap';
+
+import '../App.css';
 // import {Panel} from 'react-bootstrap';
 
 
@@ -46,16 +49,15 @@ class NoteForm extends Component {
 
   render() {
     return (
-      <div>
+      <div className="Form-container">
         {/*<h1>Note Form Here</h1>*/}
-        <form>
+        <form className="App-form">
         <input
           onChange={this.handleNoteInput}
           name="title"
           placeholder="Note Title"
           value={this.state.title}>
         </input>
-
         <br/>
         <textarea
           rows="10"
@@ -66,7 +68,7 @@ class NoteForm extends Component {
           value={this.state.text}>
         </textarea>
         <br/>
-        <button type="button" onClick={this.addNoteHandler}>Create Note</button>
+        <Button bsStyle="" bsSize="large" type="button" onClick={this.addNoteHandler}>Create Note</Button>
 
         </form>
           {/*<Panel bsStyle="primary">
