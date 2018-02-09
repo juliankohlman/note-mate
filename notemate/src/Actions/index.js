@@ -2,6 +2,7 @@
 export const ADD_NOTE = 'ADD_NOTE';
 export const GET_NOTES = 'GET_NOTES';
 export const DELETE_NOTE = 'DELETE_NOTE';
+export const UPDATE_NOTE = 'UPDATE_NOTE';
 
 // action creators
 export const addNote = (note) => {
@@ -22,5 +23,12 @@ export const deleteNote = (title) => {
   return {
     type: DELETE_NOTE,
     payload: title
+  }
+}
+
+export const updateNote = (note) => {
+  return {
+    type: UPDATE_NOTE,
+    payload: note
   }
 }

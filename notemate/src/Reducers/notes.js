@@ -1,4 +1,4 @@
-import { ADD_NOTE, GET_NOTES, DELETE_NOTE  } from '../Actions'
+import { ADD_NOTE, GET_NOTES, DELETE_NOTE, UPDATE_NOTE  } from '../Actions'
 
 export default (notes = [], action) => {
   switch (action.type) {
@@ -8,6 +8,10 @@ export default (notes = [], action) => {
       return action.payload;
     case DELETE_NOTE:
       return notes.filter(note => note.title !== action.payload);
+    case UPDATE_NOTE:
+      // map over notes if note === e.target then make note === to new text and or
+      // title else return the note
+      return notes;
     default:
       return notes;
   }

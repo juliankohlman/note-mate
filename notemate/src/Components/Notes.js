@@ -23,12 +23,14 @@ class Notes extends Component {
   render() {
     return (
       <div>
-        <h1>Note List</h1>
-        {/* show a list empty  h1 message when notes length is 0 otherwise show note list h1 */}
+      {/* show a list empty  h1 message when notes length is 0 otherwise show note list h1 */}
+      {(this.props.notes.length === 0) ? <h1>Note List Empty</h1> : <h1>Note List</h1>}
+
+      {/*<span contentEditable></span>*/}
+        {console.log(this.props.notes.length)}
           { this.props.notes.map((note, i) => {
             return <Note title={note.title} text={note.text} key={i} />;
           })}
-
       </div>
     );
   }
