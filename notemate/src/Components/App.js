@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import logo from '../logo.svg';
 import '../App.css';
-import NoteList from './NoteList';
-
+import NoteForm from './NoteForm';
+// import NoteDisplay from './NoteDisplay';
+import Notes from './Notes';
 
 class App extends Component {
   render() {
@@ -18,7 +19,9 @@ class App extends Component {
       {/* Notes component here
         < NoteList />
       */}
-      <NoteList />
+      <NoteForm />
+      <Notes />
+      {/*<NoteDisplay />*/}
       </div>
     );
   }

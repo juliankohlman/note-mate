@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { addNote } from '../Actions';
-import {Panel} from 'react-bootstrap';
+import { addNote  } from '../Actions';
+// import {Panel} from 'react-bootstrap';
 
 
-class NoteList extends Component {
+class NoteForm extends Component {
   constructor() {
     super();
     this.state = {
@@ -30,6 +30,7 @@ class NoteList extends Component {
 
   // addNoteHandler
   addNoteHandler = e => {
+    console.log(this.state);
     // const { note } = this.state
     const newNote = {
       title: this.state.title,
@@ -63,13 +64,13 @@ class NoteList extends Component {
           placeholder="Note"
           value={this.state.text}>
         </textarea>
-        <button type="button" onClick={this.addNoteHandler.bind(this)}>Create Note</button>
+        <button type="button" onClick={this.addNoteHandler}>Create Note</button>
 
         </form>
-          <Panel bsStyle="primary">
+          {/*<Panel bsStyle="primary">
             <Panel.Heading>Panel heading without a title</Panel.Heading>
             <Panel.Body>Panel content</Panel.Body>
-          </Panel>
+          </Panel>*/}
       </div>
 
     );
@@ -83,5 +84,5 @@ const mapStateToProps = state => {
   }
 };
 
-// export default NoteList;
-export default connect(mapStateToProps, { addNote })(NoteList);
+// export default NoteForm;
+export default connect(mapStateToProps, { addNote })(NoteForm);
