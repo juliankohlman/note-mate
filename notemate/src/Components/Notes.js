@@ -28,9 +28,10 @@ class Notes extends Component {
 
       {/*<span contentEditable></span>*/}
         {console.log(this.props.notes.length)}
-          { this.props.notes.map((note, i) => {
+          <span contentEditable="true">{ this.props.notes.map((note, i) => {
             return <Note title={note.title} text={note.text} key={i} />;
           })}
+          </span>
       </div>
     );
   }

@@ -47,7 +47,7 @@ class NoteForm extends Component {
   render() {
     return (
       <div>
-        <h1>Note Form Here</h1>
+        {/*<h1>Note Form Here</h1>*/}
         <form>
         <input
           onChange={this.handleNoteInput}
@@ -55,6 +55,7 @@ class NoteForm extends Component {
           placeholder="Note Title"
           value={this.state.title}>
         </input>
+
         <br/>
         <textarea
           rows="10"
@@ -64,6 +65,7 @@ class NoteForm extends Component {
           placeholder="Note"
           value={this.state.text}>
         </textarea>
+        <br/>
         <button type="button" onClick={this.addNoteHandler}>Create Note</button>
 
         </form>
